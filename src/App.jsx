@@ -86,8 +86,8 @@ import React from "react";
 
 function App(){
     return (
-        <div>
-            <header className='bg-[#0E1116]'>
+        <div className='min-w-[640px] w-full overflow-x-auto'>
+            <header className='bg-[#0e1117]'>
             <title>Visual Studio Code</title>
                 <div> 
                 <div className=" px-4 py-3 flex items-center justify-between">
@@ -106,12 +106,12 @@ function App(){
                 </div>
                 </div>
             </header>
-             <div className="bg-[#1f1f2f] text-white text-center py-3 px-4 text-sm md:text-base">
+             <div className="bg-[#0b1525] border border-[#1a2333] text-white text-center py-3 px-4 text-sm md:text-base">
         Try <a href="#" className="underline text-blue-400 hover:text-blue-300">MCP servers</a> to extend agent mode in VS Code!
       </div>
 
       {/* main section */}
-            <section className='bg-[#0D1424] h-svh '>
+            <section className='bg-gradient-to-b from-[#0e1117] h-svh '>
                 <h1 className='text-[#C5D0E2] font-bold  flex justify-center text-[70px]'> Your code editor.
                 </h1><h1 className='text-[#C5D0E2] font-bold  flex justify-center text-[70px] -translate-y-2'> Redefined with AI.</h1>
          <div className='flex justify-center space-x-4'>
@@ -128,7 +128,10 @@ function App(){
          <div className='p-10'>
             <img src={imagelink} alt="pic" className="w-full max-w-[1050px] mx-auto rounded-lg shadow-lg" />
          </div>
-            </section>can 
+            </section>
+
+
+
         </div>
     )
 }
