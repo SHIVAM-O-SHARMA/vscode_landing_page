@@ -4,7 +4,7 @@ import cardimg2 from '../images/cardimage2.png';
 
 function Card({title, description, image}){
     return (
-        <div className="bg-[#161a1f] w-90 h-85 translate-x-8 px-7 py-7 rounded-md border border-[#303338]  '         ">
+        <div className="bg-[#161a1f] w-90 h-85 translate-x-8 px-7 py-7 rounded-md border border-[#303338] hover:border-gray-700 transition-colors duration-200">
          <div className="text-[#c2d0e5] font-semibold text-[19px]">
             {title}
          </div>

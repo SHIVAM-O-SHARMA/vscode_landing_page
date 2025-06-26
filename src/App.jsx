@@ -30,9 +30,9 @@ function App(){
       </div>
 
             {/* main section */}
-        <main className='bg-[#0e1117]'>
+        <main className=''>
       
-        <section>
+        <section className='bg-gradient-to-b from-[#0e1117]'>
                 <h1 className='text-[#C5D0E2] font-bold  flex justify-center text-[70px]'> Your code editor.
                 </h1><h1 className='text-[#C5D0E2] font-bold  flex justify-center text-[70px] -translate-y-2'> Redefined with AI.</h1>
         <div className='flex justify-center space-x-4'>
@@ -51,42 +51,25 @@ function App(){
          </div>
             </section>
 
-           <section className='pt-15 pb-15'>
-            
+           <section className='bg-[#0e1117] pt-15 pb-15'>
+            <Cardsection/>
            </section>
-           <Cardsection/>
            <section>
            <Section/>
            </section>
           </main>
           
+        <footer className='bg-[#0e1117] text-[#9aa3b3]'>
+          <div className='space-x-5 p-20'>
+            <a href="#">Support</a>
+            <a href="#">Privacy</a>
+            <a href="#">Terms of use</a>
+            <a href="#">License</a>
+          </div>
+        </footer>
+
         </div>
     )
 }
-
-
-    //    card component logic written
-
-function CardSection(){
-    return(
-        <div className='grid grid-cols-3 mx-18 '>    
-            <Card
-            title={'Any model for any team'}
-            description={"Use AI models like Claude Sonnet out of the box, or bring your own key to access models from Azure, Anthropic, Google, Ollama, OpenAI, and OpenRouter."}
-            image={cardimg}
-            />
-            <Card
-            title={'An expert on your codebase'}
-            description={"Your codebase is indexed locally and remotely (on GitHub) to understand what's relevant, enabling fast, context-aware interactions."}
-            image={cardimg1}
-            />
-            <Card
-            title={'AI that works the way your team does'}
-            description={'Personalize interactions using custom instructions and reusable prompt files tailored to your workflows, tools, and projects.'}
-            image={cardimg2}/>
-        </div>
-    )
-}
-
 
 export default App;
