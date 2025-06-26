@@ -1,6 +1,7 @@
 import './App.css'
-import imagelink  from './assets/images/pic.png'
-import React from "react";
+import imagelink  from './assets/images/pic.png';
+import { Cardsection } from './assets/components/cardComponent';
+import { Section } from './assets/components/sectionComponent';
 
 function App(){
     return (
@@ -9,7 +10,7 @@ function App(){
             <title>Visual Studio Code</title>
                 <div> 
                 <div className=" px-4 py-3 flex items-center justify-between">
-                    <div className='text-[#C5D0E2] text-[24px] p-3'>Visual Studio Code</div>
+                    <div className='text-[#C5D0E2] text-[30px] p-3 md:text-[24px]'>Visual Studio Code</div>
                     <nav className='text-[#6E707C] md:block hidden  space-x-6 size-17 text-[19px] translate-y-5.5 '>
                     <a  className='hover:underline' href="#">Docs</a>
                     <a  className='hover:underline' href="#">Updates</a>
@@ -27,12 +28,14 @@ function App(){
              <div className="bg-[#0b1525] border border-[#1a2333] text-white text-center py-3 px-4 text-sm md:text-base">
         Try <a href="#" className="underline text-blue-400 hover:text-blue-300">MCP servers</a> to extend agent mode in VS Code!
       </div>
-               <main>
-      {/* main section */}
-            <section className='bg-gradient-to-b from-[#0e1117] h-svh '>
+
+            {/* main section */}
+        <main className='bg-[#0e1117]'>
+      
+        <section>
                 <h1 className='text-[#C5D0E2] font-bold  flex justify-center text-[70px]'> Your code editor.
                 </h1><h1 className='text-[#C5D0E2] font-bold  flex justify-center text-[70px] -translate-y-2'> Redefined with AI.</h1>
-         <div className='flex justify-center space-x-4'>
+        <div className='flex justify-center space-x-4'>
             <div>
             <button className='bg-[#3476CD] hover:bg-blue-500 w-54 h-14 rounded text-white text-[20px] hover:cursor-pointer'>Download for macOs</button>
             </div>
@@ -48,11 +51,42 @@ function App(){
          </div>
             </section>
 
-           <section></section>
+           <section className='pt-15 pb-15'>
+            
+           </section>
+           <Cardsection/>
+           <section>
+           <Section/>
+           </section>
           </main>
-
+          
         </div>
     )
 }
+
+
+    //    card component logic written
+
+function CardSection(){
+    return(
+        <div className='grid grid-cols-3 mx-18 '>    
+            <Card
+            title={'Any model for any team'}
+            description={"Use AI models like Claude Sonnet out of the box, or bring your own key to access models from Azure, Anthropic, Google, Ollama, OpenAI, and OpenRouter."}
+            image={cardimg}
+            />
+            <Card
+            title={'An expert on your codebase'}
+            description={"Your codebase is indexed locally and remotely (on GitHub) to understand what's relevant, enabling fast, context-aware interactions."}
+            image={cardimg1}
+            />
+            <Card
+            title={'AI that works the way your team does'}
+            description={'Personalize interactions using custom instructions and reusable prompt files tailored to your workflows, tools, and projects.'}
+            image={cardimg2}/>
+        </div>
+    )
+}
+
 
 export default App;
