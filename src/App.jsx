@@ -9,9 +9,10 @@ function App(){
             <header className='bg-[#0e1117]'>
             <title>Visual Studio Code</title>
                 <div> 
-                <div className=" px-4 py-3 flex items-center justify-between">
-                    <div className='text-[#C5D0E2] text-[30px] p-3 md:text-[24px]'>Visual Studio Code</div>
-                    <nav className='text-[#6E707C] md:block hidden  space-x-6 size-17 text-[19px] translate-y-5.5 '>
+                <div className=" px-4 py-1 grid grid-cols-8">
+                    <div className='text-[#C5D0E2] text-[30px] col-span-2 p-3 md:text-[24px]'>Visual Studio Code</div>
+                    <div className='col-span-5'>
+                    <nav className='text-[#6E707C] md:flex hidden items-center space-x-6 text-[19px] translate-y-1.5 '>
                     <a  className='hover:underline' href="#">Docs</a>
                     <a  className='hover:underline' href="#">Updates</a>
                     <a  className='hover:underline' href="#">Blog</a>
@@ -19,9 +20,11 @@ function App(){
                     <a  className='hover:underline' href="#">Extension</a>
                     <a  className='hover:underline' href="#">FAQ</a>
                     <a  className='hover:underline' href="#">GitHubCopilot</a>
-                    </nav>
-                    {/* <input type="text" className='text-[#C5D0E2] border border-[##C5D0E2] bg-[#0E1116] px-2 py-1 m-2 rounded'/> */}
-                    <button className='text-[#C5D0E2] md:block hidden hover:bg-blue-600 bg-[#3476CD] rounded size-20'>Download</button>
+                    <a  className='hover:underline' href="#">MCP</a>
+                    <input type="text" placeholder='🔍  Search Docs' className='text-[#C5D0E2] border border-gray-700 text-[18px] bg-[#0E1116] px-1 py-1 m-2 rounded'/>
+                    <button className='text-[#C5D0E2] md:block hidden hover:bg-blue-600 bg-[#3476CD] rounded mx-1 px-9 py-1'>Download</button>
+                </nav>
+                </div>
                 </div>
                 </div>
             </header>
